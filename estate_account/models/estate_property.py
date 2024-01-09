@@ -4,6 +4,9 @@ from odoo.exceptions import UserError
 class EstateAccount(models.Model):
     _inherit = "estate.property"
 
+    def nara(self):
+        return ""
+
     def action_sold(self):
         self._create_invoices()
         return super().action_sold()
